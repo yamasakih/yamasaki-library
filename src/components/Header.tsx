@@ -35,7 +35,7 @@ export default function Header() {
           gap: "8px",
           color: "#1565C0",
         }}>
-          <span role="img" aria-label="本">📚</span>
+          <img src="/assets/icon.png" alt="やまさきとしょかん" style={{width: "32px", height: "32px"}} />
           <span style={{
             fontSize: "16px",
             fontWeight: "bold",
@@ -63,7 +63,7 @@ export default function Header() {
           onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#FF6B6B"}
           >
             <span role="img" aria-label="虫眼鏡">🔍</span>
-            バーコードでさがす
+            ほんをかりる
           </Link>
         )}
       </div>
