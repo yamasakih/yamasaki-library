@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Book {
+  id            String     @id @default(cuid())
+  isbn          String     @unique
+  title         String
+  author        String?
+  publisher     String?
+  imageUrl      String?
+  checkoutCount Int        @default(0)
+  lastCheckout  DateTime?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  checkouts     Checkout[]
+}
+
+model Checkout {
+  id        String   @id @default(cuid())
+  bookId    String
+  book      Book     @relation(fields: [bookId], references: [id])
+  createdAt DateTime @default(now())
+}
