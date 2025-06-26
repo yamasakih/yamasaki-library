@@ -36,8 +36,8 @@ export default function Header() {
           color: "#1565C0",
         }}>
           <span role="img" aria-label="本">📚</span>
-          <span style={{ 
-            fontSize: "16px", 
+          <span style={{
+            fontSize: "16px",
             fontWeight: "bold",
           }}>
             やまさきとしょかん
