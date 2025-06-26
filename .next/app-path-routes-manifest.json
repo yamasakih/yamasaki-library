@@ -1,8 +1,0 @@
-{
-  "/api/checkout/route": "/api/checkout",
-  "/api/books/route": "/api/books",
-  "/api/stats/route": "/api/stats",
-  "/_not-found/page": "/_not-found",
-  "/scan/page": "/scan",
-  "/page": "/"
-}
